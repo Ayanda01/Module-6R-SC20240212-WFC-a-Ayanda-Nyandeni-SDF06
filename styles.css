@@ -21,6 +21,29 @@ body {
 img {
     display: block;
 }
+/* Base Styles */
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+img {
+    display: block;
+}
+
 /* Profile Section */
 .profile {
     display: flex;
@@ -100,23 +123,33 @@ img {
 .profile-real-name {
     font-weight: 600;
 }
-
+.container{
+    width: 90%;
+    max-width: 933px;
+    margin: 0 auto;
+}
 /* Gallery Section */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1px;
+   
 }
 
 .gallery-item {
     position: relative;
-    cursor: pointer;
+    flex: 1 0 33.333%;
+    max-width: 33.333%;
+    padding: 1px;
+    overflow: hidden;  
+
 }
 
 .gallery-image {
+    object-fit:cover ;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    
 }
 
 .gallery-item-info {
